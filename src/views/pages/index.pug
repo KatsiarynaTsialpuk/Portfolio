@@ -1,6 +1,14 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  .hero-block
+    .hero-block__content
+      .hero-block__user
+        .user
+          .user__img
+            img.user__img-avatar
+          .user__desc
+            .user__name Владимир Астахов
+            .user__info Личный сайт веб-разработчика
+      .hero-block__socials
+        +socials(['vk', 'gh', 'in'], 'socials_fill_green')

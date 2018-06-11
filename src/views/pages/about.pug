@@ -1,10 +1,98 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Обо мне'
+    - var title = 'Обо мне'
 
 block scripts
-  script(src='about.bundle.js')
+    script(src='intro.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+    section.intro
+        header.intro__header.header
+            .header__left
+                .social
+                    ul.social__list
+                        each item in ['vk', 'gh', 'in']
+                            li.social__list-item
+                                a(href="#").social__list-link
+                                    +icon(item, 'social__list-img')
+            .header__right
+                .hamburger
+                    a(href="#").hamburger__link
+        .intro__title
+            .section-title
+                img(src="" alt="").section-title__img
+            .intro__user
+                .user
+                    .user__img
+                        img.user__img-avatar
+                    .user__desc
+                        .user__name Владимир Астахов
+                        .user__info Личный сайт веб-разработчика
+        .intro__btn
+            .arrow-down
+                a(href="#").arrow-down__link
+    section.about
+        .about__left
+            .about__triangle
+                svg.triangle
+            .about__left-title
+                .title Обо мне
+            .about__left-content
+                .desc
+                    .desc__img
+                        img.desc__avatar
+                    .desc__info
+                        .desc__title
+                            .subtitle Кто я
+                        .desc__data.text-content
+                            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .about__right
+            .about__triangle
+                svg.triangle
+            .about__right-title
+                .title Чем я могу быть вам полезен
+            .about__right-desc.text-content
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .about__right-content
+                .skills
+                    -
+                        var skills = [
+                        ['Frontend', [['Html5', 30], ['css3', 50], ['javascript & jquery', 70]]],
+                        ['Backend', [['Php', 20], ['MySQL', 40], ['Node.js & npm', 20], ['Mongo.db', 10]]],
+                        [['Workflow', [['Git', 90], ['Gulp', 80], ['Bower', 70]]]]
+                        ]
+                    ul.skills__list
+                        each row in skills
+                            li.skills__item.skills-row
+                                .skills-row__title #{row[0}
+                                ul.skills-row__list
+                                    each skill in row[1]
+                                        li.skills-row__item
+                                            figure.skill
+                                                svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                                                    circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                                                    circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                                                    .skill__title #{skill[0]}
+
+    section.map
+        .google-map
+        .map__content
+            .contacts
+                h2.contacts__title
+                    .title Контакты
+                address.contacts__desc
+                    ul.contacts__list
+                        -
+                            var contacts = [
+                            ['skype', 'skype_kdn'],
+                            ['mail', 'skype_kdn'],
+                            ['phone', 'skype_kdn'],
+                            ['location', 'skype_kdn']
+                            ]
+                        each item in contacts
+                            li.contacts__item
+                                .contacts__icon
+                                    +image(`../${item[0]}`, 'sdasd', 'contacts__icon-img')
+                                .contacts__title #{item[1]}
