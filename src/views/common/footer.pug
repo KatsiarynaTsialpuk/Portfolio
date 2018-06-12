@@ -7,9 +7,11 @@ footer.footer
                         li.menu__item
                             a(href="#").menu__link #{item}
         .footer__col.footer__col_end
-            +socials('', socList)
+            +socials('footer', socList)
     .footer__row
         .footer__col
             .footer__text
                 p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-            include ../common/sub_footer
+        .footer__col.footer__col_end
+            .footer__text
+                p © Владимир Астахов | создано с любовью в LoftSchool | 2016

@@ -1,0 +1,13 @@
+.arrow-down {
+  bottom: 70px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  &__img{
+    display: block;
+    width: 25px;
+    height: 16px;
+  }
+}

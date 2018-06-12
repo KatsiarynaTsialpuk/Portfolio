@@ -6,7 +6,7 @@ mixin image(imagePath, imageAlt, imageClass)
     img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
 mixin socials(modClassName, items)
-    ul.socials(class=(modClassName === '') ? '' : `socials--${modClassName}`)
+    ul.socials(class=(modClassName === '') ? '' : `socials__${modClassName}`)
         each val, item in items
             li(class=`socials__item`)
                 a(class=`socials__link` href=`${val}` target="_blank")

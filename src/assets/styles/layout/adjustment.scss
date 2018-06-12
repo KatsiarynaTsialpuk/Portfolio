@@ -1,0 +1,54 @@
+.section {
+  min-height: 650px;
+}
+
+.title {
+  font-size: 63px;
+  line-height: 66px;
+  font-family: bernier;
+  text-transform: uppercase;
+  color: $grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before,
+  &::after {
+    content: "";
+    background: rgba(55, 62, 66, .2);
+    height: 5px;
+    width: 22px;
+    margin: 0 15px;
+  }
+
+  &__small {
+    color: $text-color;
+    font-size: 35px;
+    line-height: 20px;
+    font-family: bernier;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+.text-content {
+  font-size: 16px;
+  line-height: 24px;
+  color: $text-color;
+
+  p {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

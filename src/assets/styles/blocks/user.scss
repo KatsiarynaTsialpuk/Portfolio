@@ -4,17 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //width: 380px;
-  //height: 395px;
-  padding: 40px 70px;
-  
-  &__color-gray {
-    background: rgba(255, 255, 255, 0.85);
-  }
 
   &__img {
-    margin-bottom: 20px;
-
     &-avatar {
       background: url("./assets/images/avatar.jpg") center center / cover no-repeat;
       border-radius: 50%;
@@ -25,16 +16,15 @@
 
   &__desc {
     font-family: 'Roboto', 'Helvetica', sans-serif;
-    color: $text-color;
+    color: $white;
     text-align: center;
     margin-bottom: 40px;
   }
 
   &__name {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 35px;
+    line-height: 99px;
     font-weight: 500;
-    margin-bottom: 10px;
   }
 
   &__info {
@@ -48,5 +38,28 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+
+  &__color-gray {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 70px;
+
+    .user__img {
+      margin-bottom: 20px;
+    }
+
+    .user__desc {
+      color: $text-color;
+    }
+
+    .user__name {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 10px;
+    }
+
+    .user__info {
+      font-weight: 300;
+    }
   }
 }

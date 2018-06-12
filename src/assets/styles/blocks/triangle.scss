@@ -1,0 +1,13 @@
+.triangle {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+
+  polygon.triangle_fill_gray {
+    fill: $white;
+  }
+
+  polygon.triangle_fill_beige {
+    fill: $beige;
+  }
+}
