@@ -1,4 +1,6 @@
 include ./common/_mixins
+include ./common/_variables
+
 block variables
 
 doctype html
@@ -14,6 +16,7 @@ html(lang="ru")
     .wrapper
       .maincontent
         block content
+          include ./common/header.pug
 
       include ./common/footer.pug
 

@@ -1,0 +1,33 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin-right: 28px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      .socials__icon {
+        fill: $green;
+      }
+    }
+  }
+
+  &__icon {
+    fill: rgba(0, 191, 165, .5);
+    width: 30px;
+    height: 25px;
+    transition: .3s;
+  }
+}

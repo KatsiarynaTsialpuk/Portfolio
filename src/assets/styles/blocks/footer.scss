@@ -1,0 +1,14 @@
+.copyright {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p {
+    font-size: 16px;
+    line-height: 100px;
+    font-weight: 300;
+    font-family: 'Roboto Thin', 'Helvetica', sans-serif;
+    color: $white;
+  }
+}

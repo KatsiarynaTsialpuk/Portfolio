@@ -1,14 +1,51 @@
 extends ../auth.layout.pug
 
 block content
-  .hero-block
-    .hero-block__content
-      .hero-block__user
-        .user
+  -
+    var menuFirst = [
+    {
+    'name': 'Мои работы',
+    'href': './works.html',
+    'class': []
+    },
+    {
+    'name': 'Обо мне',
+    'href': './about.html',
+    'class': []
+    },
+    {
+    'name': 'Блог',
+    'href': './blog.html',
+    'class': []
+    }
+    ]
+  -
+    var menuSecond = [
+    {
+    'name': 'На главную',
+    'href': '#',
+    'class': ['equal', 'flip']
+    },
+    {
+    'name': 'Войти',
+    'href': '#',
+    'class': ['equal', 'submit']
+    }
+    ]
+
+  section.section.index
+    .index__content
+      .index__user
+        .user.user__color-gray
           .user__img
             img.user__img-avatar
           .user__desc
             .user__name Владимир Астахов
             .user__info Личный сайт веб-разработчика
-      .hero-block__socials
-        +socials(['vk', 'gh', 'in'], 'socials_fill_green')
+          .index__socials
+            +socials('', socList)
+          +nav('nav', menuFirst)
+          //include ../common/nav
+    .auth
+      a(href="#").btn-auth Авторизироваться
+    include ../common/sub_footer

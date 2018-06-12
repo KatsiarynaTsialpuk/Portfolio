@@ -11,11 +11,6 @@ block content
         header.intro__header.header
             .header__left
                 .social
-                    ul.social__list
-                        each item in ['vk', 'gh', 'in']
-                            li.social__list-item
-                                a(href="#").social__list-link
-                                    +icon(item, 'social__list-img')
             .header__right
                 .hamburger
                     a(href="#").hamburger__link
@@ -35,7 +30,8 @@ block content
     section.about
         .about__left
             .about__triangle
-                svg.triangle
+                svg.triangle.triangle_fill_white
+                    polygon(points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1")
             .about__left-title
                 .title Обо мне
             .about__left-content
@@ -50,31 +46,14 @@ block content
                             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         .about__right
             .about__triangle
-                svg.triangle
+                svg.triangle.triangle_fill_beige
+
             .about__right-title
                 .title Чем я могу быть вам полезен
             .about__right-desc.text-content
                 p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
             .about__right-content
-                .skills
-                    -
-                        var skills = [
-                        ['Frontend', [['Html5', 30], ['css3', 50], ['javascript & jquery', 70]]],
-                        ['Backend', [['Php', 20], ['MySQL', 40], ['Node.js & npm', 20], ['Mongo.db', 10]]],
-                        [['Workflow', [['Git', 90], ['Gulp', 80], ['Bower', 70]]]]
-                        ]
-                    ul.skills__list
-                        each row in skills
-                            li.skills__item.skills-row
-                                .skills-row__title #{row[0}
-                                ul.skills-row__list
-                                    each skill in row[1]
-                                        li.skills-row__item
-                                            figure.skill
-                                                svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                                                    circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                                                    circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                                                    .skill__title #{skill[0]}
+                include ../common/skills
 
     section.map
         .google-map
@@ -94,5 +73,5 @@ block content
                         each item in contacts
                             li.contacts__item
                                 .contacts__icon
-                                    +image(`../${item[0]}`, 'sdasd', 'contacts__icon-img')
+                                    +icon(`${item[0]}`, 'contacts__icon-img')
                                 .contacts__title #{item[1]}
