@@ -19,7 +19,10 @@
   &__left, &__right {
     flex: 1;
     padding: 20px;
-    background: $white;
+  }
+
+  &__left {
+    background: $light-gray;
   }
 
   &__right {

@@ -29,6 +29,23 @@
     text-align: center;
     margin-bottom: 20px;
   }
+  
+  &__left {
+    text-align: left;
+  }
+  
+  &__white {
+    color: $white;
+    margin-bottom: 10px;
+
+    &::before {
+      background: rgba(255, 255, 255, .2);
+    }
+
+    &::after {
+      background: rgba(255, 255, 255, .2);
+    }
+  }
 
   &__wrapper {
     display: flex;

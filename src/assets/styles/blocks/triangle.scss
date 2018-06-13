@@ -4,10 +4,14 @@
   left: 0;
 
   polygon.triangle_fill_gray {
-    fill: $white;
+    fill: $light-gray;
   }
 
   polygon.triangle_fill_beige {
     fill: $beige;
+  }
+
+  polygon.triangle_fill_white {
+    fill: $white;
   }
 }
