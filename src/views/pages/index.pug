@@ -38,7 +38,7 @@ block content
       .index__user
         .user.user__color-gray
           .user__img
-            img.user__img-avatar
+            .user__img-avatar
           .user__desc
             .user__name Владимир Астахов
             .user__info Личный сайт веб-разработчика
@@ -47,4 +47,5 @@ block content
           +nav('nav', menuFirst)
     .auth
       a(href="#").btn-auth Авторизироваться
-    include ../common/sub_footer
+    .footer__index.copyright
+        p © Владимир Астахов | создано с любовью в LoftSchool | 2016
