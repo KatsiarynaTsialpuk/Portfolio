@@ -1,0 +1,11 @@
+.map {
+  background: url("./assets/images/map_bg.jpg") center center / cover no-repeat;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+}

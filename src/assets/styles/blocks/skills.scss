@@ -1,0 +1,68 @@
+.skills {
+  margin: 60px;
+
+  &__list,
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-row__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-row__item {
+    margin-bottom: 40px;
+    margin-left: 40px;
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__img-title {
+    color: #00bfa5;
+    font-size: 14px;
+    left: 50%;
+    max-width: 70px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.circle {
+  margin: 0;
+
+  &__figure {
+    height: 120px;
+    transform: rotate(-90deg);
+    width: 120px;
+  }
+
+  &__below,
+  &__above {
+    fill: transparent;
+    stroke-width: 20;
+  }
+
+  &__below {
+    stroke: #dfdcd5;
+  }
+
+  &__above {
+    stroke: #00bfa5;
+    stroke-dasharray: 282.3;
+    stroke-dashoffset: 100;
+    transition: stroke-dasharray 1s;
+  }
+}

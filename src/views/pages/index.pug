@@ -1,6 +1,50 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  -
+    var menuFirst = [
+    {
+    'name': 'Мои работы',
+    'href': './works.html',
+    'class': []
+    },
+    {
+    'name': 'Обо мне',
+    'href': './about.html',
+    'class': []
+    },
+    {
+    'name': 'Блог',
+    'href': './blog.html',
+    'class': []
+    }
+    ]
+  -
+    var menuSecond = [
+    {
+    'name': 'На главную',
+    'href': '#',
+    'class': ['equal', 'flip']
+    },
+    {
+    'name': 'Войти',
+    'href': '#',
+    'class': ['equal', 'submit']
+    }
+    ]
+
+  section.section.index
+    .index__content
+      .index__user
+        .user.user__color-gray
+          .user__img
+            img.user__img-avatar
+          .user__desc
+            .user__name Владимир Астахов
+            .user__info Личный сайт веб-разработчика
+          .index__socials
+            +socials('green', socList)
+          +nav('nav', menuFirst)
+    .auth
+      a(href="#").btn-auth Авторизироваться
+    include ../common/sub_footer

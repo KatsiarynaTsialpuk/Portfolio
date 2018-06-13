@@ -1,0 +1,27 @@
+-
+    var skills = [
+    {
+    title: 'Frontend',
+    skill:  ['HTML5', 'CSS3', 'JavaScript & jQuery']
+    },{
+    title: 'Backend',
+    skill: ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+    },{
+    title: 'Workflow',
+    skill: ['Git', 'Gulp', 'Bowel']
+    }
+    ]
+
+.skills
+    ul.skills__list
+        each item in skills
+            li.skills__item.skills-row
+                .skills__item-title #{item.title}
+                ul.skills-row__list
+                    each desc in item.skill
+                        li.skills-row__item
+                            .skills__img-title #{desc}
+                            figure.circle(data-percents='70')
+                                svg(viewBox='0 0 110 110' preserveAspectRatio="none").circle__figure
+                                    circle(r="45" cx="50%" cy="50%").circle__below
+                                    circle(r="45" cx="50%" cy="50%").circle__above
