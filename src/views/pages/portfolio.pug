@@ -1,0 +1,21 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Блог'
+
+block scripts
+
+block content
+    include ../blocks/intro
+    section.section.portfolio
+        .portfolio__triangle
+            svg(viewBox="0 0 1000 110" preserveAspectRatio="none").triangle
+                polygon(points="0,0 0,110 500,110").triangle__fill_light_yellow
+                polygon(points="500,110 1000,0 1000,110").triangle__fill_light_yellow
+        .portfolio__title
+            .title Мои работы
+            +icon('works_title', 'section-title__img section-title__img-small section-title__img-gray')
+        .portfolio__content
+            .portfolio__left
+
+            .portfolio__right

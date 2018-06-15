@@ -1,0 +1,43 @@
+.portfolio {
+  &__triangle {
+    position: relative;
+  }
+  
+  &__title {
+    position: relative;
+    padding: 60px 0;
+    background: $light-yellow;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+
+    &-title, &-content {
+      flex: 1;
+    }
+
+    &-title {
+      margin-right: 20px;
+    }
+  }
+
+  &__left, &__right {
+    flex: 1;
+    padding: 20px;
+  }
+
+  &__left {
+    background: $light-gray;
+  }
+
+  &__right {
+    background: $beige;
+  }
+}

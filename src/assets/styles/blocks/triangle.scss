@@ -1,17 +1,25 @@
+.triangle_wrapper {
+  position: relative;
+}
+
 .triangle {
   position: absolute;
   bottom: 100%;
   left: 0;
 
-  polygon.triangle_fill_gray {
+  &__fill_gray {
     fill: $light-gray;
   }
 
-  polygon.triangle_fill_beige {
+  &__fill_beige {
     fill: $beige;
   }
 
-  polygon.triangle_fill_white {
+  &__fill_white {
     fill: $white;
+  }
+
+  &__fill_light_yellow {
+    fill: $light-yellow
   }
 }

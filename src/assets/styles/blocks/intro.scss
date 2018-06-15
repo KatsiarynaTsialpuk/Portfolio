@@ -28,5 +28,10 @@
       fill: rgba(110, 113, 113, .07);
       position: absolute;
     }
+
+    &-small {
+      height: auto;
+      top: 0;
+    }
   }
 }
