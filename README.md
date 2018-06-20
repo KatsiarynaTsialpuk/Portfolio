@@ -3,5 +3,5 @@
 <b>Author:</b> Telpuk Ekaterina<br>
 <b>Teacher:</b> Yuri Kuchma<br>
 <b>Create:</b> June - July 2018<br>
-<b>Technologies:</b> Gulp, Webpack, Pug<br>
+<b>Technologies:</b> Gulp, Webpack, Pug, Google Maps API, Vue.js<br>
 <b>Portfolio(project)</b>: [Portfolio](https://katsiarynatsialpuk.github.io/Portfolio/)
