@@ -3,7 +3,7 @@
     "id": 1,
     "title" : "Сайт школы онлайн образования",
     "skills" : "Html, Css, JavaScript",
-    "photo" : "/assets/images/content/slider/work-1.png",
+    "photo" : "./assets/images/content/slider/work-1.png",
     "link" : "//loftschool.ru"
   },
   {
