@@ -29,6 +29,10 @@
     text-align: center;
     margin-bottom: 20px;
   }
+
+  &__form {
+    font-size: 30px;
+  }
   
   &__left {
     text-align: left;
@@ -44,6 +48,13 @@
 
     &::after {
       background: rgba(255, 255, 255, .2);
+    }
+  }
+
+  &__without-line {
+    &::before,
+    &::after {
+      display: none;
     }
   }
 
