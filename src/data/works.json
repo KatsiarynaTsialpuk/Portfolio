@@ -10,21 +10,21 @@
     "id": 2,
     "title" : "AtmaYoga",
     "skills" : "2 Html, Css, JavaScript",
-    "photo" : "/assets/images/content/slider/work-2.png",
+    "photo" : "./assets/images/content/slider/work-2.png",
     "link" : "//atmayoga.ru"
   },
   {
     "id": 3,
     "title" : "Дизайн интерьера",
     "skills" : "3 Html, Css, JavaScript",
-    "photo" : "/assets/images/content/slider/work-3.png",
+    "photo" : "./assets/images/content/slider/work-3.png",
     "link" : "//design.ru"
   },
   {
     "id": 4,
     "title" : "IT-loft",
     "skills" : "4 Html, Css, JavaScript",
-    "photo" : "/assets/images/content/slider/work-4.png",
+    "photo" : "./assets/images/content/slider/work-4.png",
     "link" : "//itloft.ru"
   }
 ]
