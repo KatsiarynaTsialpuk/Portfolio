@@ -7,6 +7,15 @@
           "info display" 70%
           "info buttons" 30%
     / 1fr 1fr;
+
+  @include tablet {
+    grid-template:
+            "display" 400px
+            "info" 300px
+            "buttons" 200px
+      / 1fr;
+    height: 100%;
+  }
 }
 
 .slider__info-container {

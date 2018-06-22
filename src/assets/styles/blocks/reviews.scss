@@ -2,6 +2,10 @@
   position: relative;
   padding-bottom: 200px;
   background: url('./assets/images/bg/reviews_bg.png') center center / cover no-repeat;
+
+  @include tablet {
+    padding-bottom: 250px;
+  }
 }
 
 .reviews__bg {
@@ -14,6 +18,10 @@
 .reviews_container {
   width: 80%;
   position: relative;
+
+  @include tablet {
+    width: 95%;
+  }
 }
 
 .reviews__form-container {
@@ -77,6 +85,10 @@
     font-size: 30px;
     margin-bottom: 20px;
     display: block;
+  }
+
+  @include tablet {
+    flex-basis: 50%;
   }
 }
 

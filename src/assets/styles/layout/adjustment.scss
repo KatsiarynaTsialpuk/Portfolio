@@ -28,16 +28,25 @@
     font-family: bernier;
     text-align: center;
     margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 30px !important;
+      line-height: 36px !important;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__form {
     font-size: 30px;
   }
-  
+
   &__left {
     text-align: left;
   }
-  
+
   &__white {
     color: $white;
     margin-bottom: 10px;
@@ -64,6 +73,15 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+    @include tablet {
+      padding-bottom: 50px;
+    }
+  }
+
+  @include tablet {
+    font-size: 49px;
+    line-height: 52px;
   }
 }
 
@@ -77,6 +95,39 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.section-title {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  position: absolute;
+
+  &__img {
+    fill: rgba(253, 253, 253, .06);
+    height: 250px;
+    width: 100%;
+
+    &-gray {
+      fill: rgba(110, 113, 113, .07);
+      position: absolute;
+
+      @include tablet {
+        height: 88px;
+      }
+    }
+
+    &-small {
+      height: auto;
+      top: 0;
+
+      @include tablet {
+        height: auto;
+      }
     }
   }
 }

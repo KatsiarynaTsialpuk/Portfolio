@@ -13,5 +13,11 @@
 
   &__bottom {
     bottom: auto;
+    transform: rotate(180deg);
+
+    @include tablet {
+      bottom: 260px;
+      left: 47%;
+    }
   }
 }

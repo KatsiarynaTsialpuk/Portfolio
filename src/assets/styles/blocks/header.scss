@@ -7,4 +7,8 @@
 
 .blog__header {
   margin: 0 300px;
+
+  @include tablet {
+    margin: 0;
+  }
 }

@@ -10,12 +10,20 @@
       font-size: 28px;
       font-weight: 500;
       margin-bottom: 20px;
+      
+      @include tablet {
+        text-align: center;
+      }
     }
   }
 
   &-row__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &-row__item {
@@ -25,6 +33,10 @@
 
     &:first-child {
       margin-left: 0;
+    }
+
+    @include tablet {
+      margin-left: 20px;
     }
   }
 
@@ -37,6 +49,14 @@
     text-align: center;
     top: 50%;
     transform: translate(-50%,-50%);
+
+    @include tablet {
+      color: $light-green;
+    }
+  }
+
+  @include tablet {
+    margin: 60px 0;
   }
 }
 
@@ -60,9 +80,13 @@
   }
 
   &__above {
-    stroke: #00bfa5;
+    stroke: $green;
     stroke-dasharray: 282.3;
     stroke-dashoffset: 100;
     transition: stroke-dasharray 1s;
+
+    @include tablet {
+      stroke: $light-green;
+    }
   }
 }
