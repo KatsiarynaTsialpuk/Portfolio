@@ -14,7 +14,7 @@ block content
                 polygon(points="0,0 0,110 500,110").triangle__fill_light_yellow
                 polygon(points="500,110 1000,0 1000,110").triangle__fill_light_yellow
         .portfolio__title
-            .title Мои работы
+            .title.title__big Мои работы
             +icon('works_title', 'section-title__img section-title__img-small section-title__img-gray')
         .portfolio__content
             #slider-component
@@ -22,8 +22,8 @@ block content
         .container.reviews_container
             .reviews__title
                 .title__wrapper
-                    .title Что обо мне
-                    .title.title__without-line говорят
+                    .title.title__big Что обо мне
+                    .title.title__big.title__without-line говорят
                     +icon('about_title', 'section-title__img section-title__img-small section-title__img-gray')
             ul.reviews__list
                 li.reviews__item
@@ -50,7 +50,7 @@ block content
                 form.modal-form.modal-form_blured
                     .modal-form__bg
                     .modal-form__title
-                        .title.title__small.title__form Связаться со мной
+                        .title.title__small Связаться со мной
                     .modal-form__container
                         input(type="text" placeholder="Имя").modal-form__input
                         input(type="text" placeholder="Email").modal-form__input

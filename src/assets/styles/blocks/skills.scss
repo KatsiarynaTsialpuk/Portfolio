@@ -38,6 +38,14 @@
     @include tablet {
       margin-left: 20px;
     }
+
+    @include phone {
+      margin: 20px;
+
+      &:first-child {
+        margin-left: 20px;
+      }
+    }
   }
 
   &__img-title {

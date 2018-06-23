@@ -8,5 +8,9 @@
 
   &__title {
     position: relative;
+
+    @include phone {
+      padding-top: 80px;
+    }
   }
  }

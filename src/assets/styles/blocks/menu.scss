@@ -8,6 +8,10 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include phone {
+    margin-right: 10px;
+  }
 }
 
 .menu__link {
@@ -19,5 +23,9 @@
 
   &:hover {
     color: $green;
+  }
+
+  @include phone {
+    white-space: nowrap;
   }
 }

@@ -65,6 +65,10 @@
     .user__info {
       font-weight: 300;
     }
+
+    @include phone {
+      padding: 40px 90px;
+    }
   }
 
   &__blog {

@@ -16,6 +16,12 @@
 
       @include tablet {
         flex-grow: 0;
+
+        margin: 0;
+      }
+
+      @include phone {
+        margin: 0;
       }
     }
 
@@ -31,6 +37,11 @@
     @include tablet {
       padding: 50px 145px;
     }
+
+
+    @include phone {
+      padding: 10px 0;
+    }
   }
 
   &__left {
@@ -43,6 +54,10 @@
     @include tablet {
       background: $yellow;
       padding: 50px 114px;
+    }
+
+    @include phone {
+      padding: 10px;
     }
   }
 
@@ -58,4 +73,12 @@
   @include tablet {
     margin-bottom: 40px;
   }
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
+}
+
+.desc__info {
+  padding: 0 10px;
 }

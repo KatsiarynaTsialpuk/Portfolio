@@ -19,5 +19,9 @@
       bottom: 260px;
       left: 47%;
     }
+
+    @include phone {
+      bottom: 300px;
+    }
   }
 }

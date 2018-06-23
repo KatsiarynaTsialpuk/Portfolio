@@ -35,6 +35,10 @@
 .reviews__title {
   text-align: center;
   margin: 70px;
+
+  @include phone {
+    margin: 30px;
+  }
 }
 
 .reviews__author {
@@ -72,6 +76,10 @@
 .reviews__list {
   display: flex;
   justify-content: center;
+
+  @include phone {
+    flex-wrap: wrap;
+  }
 }
 
 .reviews__item {
@@ -89,6 +97,15 @@
 
   @include tablet {
     flex-basis: 50%;
+  }
+
+  @include phone {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
