@@ -3,8 +3,16 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 35px 30px;
+
+  @include phone {
+    padding: 15px 10px;
+  }
 }
 
 .blog__header {
   margin: 0 300px;
+
+  @include tablet {
+    margin: 0;
+  }
 }

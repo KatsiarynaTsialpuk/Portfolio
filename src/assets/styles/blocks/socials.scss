@@ -4,6 +4,10 @@
 
   &__item {
     margin-right: 28px;
+
+    @include phone {
+      margin-right: 10px;
+    }
   }
 
   &__item:last-child {
@@ -26,8 +30,12 @@
 
   &__icon {
     fill: rgba(255, 255, 255, .5);
-    width: 30px;
-    height: 25px;
+    width: 25px;
+    height: 18px;
+
+    @include phone {
+
+    }
   }
 
   &__green {

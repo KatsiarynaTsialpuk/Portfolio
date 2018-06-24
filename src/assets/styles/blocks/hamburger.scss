@@ -1,5 +1,4 @@
 .hamburger {
-  top: 50%;
   display: flex;
 
   &__link {
@@ -10,6 +9,10 @@
     -ms-flex-align: center;
     align-items: center;
     z-index: 100;
+
+    @include phone {
+      height: 22px;
+    }
   }
 
   &__element {
@@ -26,10 +29,23 @@
 
     &:nth-child(1) {
       transform: translate(-100%, -50%) translateY(-13px);
+
+      @include phone {
+        transform: translate(-100%, -50%) translateY(-10px);
+      }
     }
 
     &:nth-child(4) {
       transform: translate(-100%, -50%) translateY(13px);
+
+      @include phone {
+        transform: translate(-100%, -50%) translateY(10px);
+      }
+    }
+
+    @include phone {
+      width: 25px;
+      height: 4px;
     }
   }
 

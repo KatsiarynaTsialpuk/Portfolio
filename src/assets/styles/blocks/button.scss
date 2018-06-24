@@ -1,0 +1,40 @@
+.btn {
+  color: $white;
+  border-radius: 5px;
+  padding: 12px 28px;
+
+  &__auth {
+    background-color: transparent;
+    border: 1px solid $white;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+
+    &:hover {
+      background: $white;
+      color: $green;
+    }
+
+    @include phone {
+      right: 50%;
+      top: 1rem;
+      transform: translateX(50%);
+    }
+  }
+
+  &__slider {
+    background: $green;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &::before {
+      font-family: "fontawesome";
+      content: '\f0c1';
+      color: $white;
+      font-size: 18px;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+}

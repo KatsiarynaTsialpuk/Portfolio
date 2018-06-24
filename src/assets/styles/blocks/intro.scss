@@ -1,5 +1,5 @@
 .intro {
-  background: url("./assets/images/bg.jpg") center center / cover no-repeat;
+  background: url("./assets/images/bg/bg.jpg") center center / cover no-repeat;
   background-position-y: inherit;
   background-color: rgb(1, 102, 114, .3);
   background-blend-mode: darken;
@@ -8,25 +8,9 @@
 
   &__title {
     position: relative;
-  }
- }
 
-.section-title {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  position: absolute;
-
-  &__img {
-    fill: rgba(253, 253, 253, .06);
-    height: 250px;
-    width: 100%;
-
-    &-gray {
-      fill: rgba(110, 113, 113, .07);
-      position: absolute;
+    @include phone {
+      padding-top: 80px;
     }
   }
-}
+ }

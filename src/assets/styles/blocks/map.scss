@@ -1,5 +1,6 @@
 .map {
-  background: url("./assets/images/map_bg.jpg") center center / cover no-repeat;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
 
   &__content {
@@ -7,5 +8,14 @@
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
+
+    @include phone {
+      top: 20%;
+    }
   }
+}
+
+#map {
+  height: 100%;
+  width: 100%;
 }

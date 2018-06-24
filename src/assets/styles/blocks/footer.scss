@@ -10,6 +10,13 @@
     font-family: 'Roboto Thin', 'Helvetica', sans-serif;
     color: $white;
   }
+
+  @include phone {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .footer {
@@ -28,6 +35,10 @@
     &:last-child {
       border: none;
     }
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__col {
@@ -42,6 +53,16 @@
       align-items: flex-start;
     }
 
+    @include tablet {
+      width: 100%;
+      margin: 15px 0;
+      padding: 0 30px;
+      justify-content: center;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
   }
 
   &__text {
@@ -50,6 +71,12 @@
     font-family: 'Roboto', 'Helvetica', sans-serif;
     font-weight: 300;
     color: rgba(255, 255, 255, .5);
+    
+    @include phone {
+      font-size: 13px;
+      line-height: 24px;
+      text-align: center;
+    }
   }
 
   &__index {

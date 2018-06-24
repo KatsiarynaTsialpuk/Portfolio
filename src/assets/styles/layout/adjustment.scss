@@ -3,11 +3,7 @@
 }
 
 .title {
-  font-size: 63px;
-  line-height: 66px;
-  font-family: bernier;
   text-transform: uppercase;
-  color: $grey;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +17,24 @@
     margin: 0 15px;
   }
 
+  &__big {
+    font-size: 63px;
+    line-height: 66px;
+    font-family: bernier;
+    color: $grey;
+
+    @include tablet {
+      font-size: 49px;
+      line-height: 52px;
+    }
+
+    @include phone {
+      font-size: 35px;
+      line-height: 42px;
+      white-space: nowrap;
+    }
+  }
+
   &__small {
     color: $text-color;
     font-size: 35px;
@@ -28,12 +42,27 @@
     font-family: bernier;
     text-align: center;
     margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 36px;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include phone {
+      font-size: 21px;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
   }
-  
+
   &__left {
     text-align: left;
   }
-  
+
   &__white {
     color: $white;
     margin-bottom: 10px;
@@ -47,12 +76,27 @@
     }
   }
 
+  &__without-line {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+
+    @include tablet {
+      padding-bottom: 50px;
+    }
+
+    @include phone {
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -66,6 +110,49 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.section-title {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  position: absolute;
+
+  &__img {
+    fill: rgba(253, 253, 253, .06);
+    height: 250px;
+    width: 100%;
+
+    &-gray {
+      fill: rgba(110, 113, 113, .07);
+      position: absolute;
+
+      @include tablet {
+        height: 88px;
+      }
+
+      @include phone {
+        height: 70px;
+        width: 200px;
+      }
+
+    }
+
+    &-small {
+      height: auto;
+      top: 0;
+
+      @include tablet {
+        top: auto;
+      }
+
+      @include phone {
+        top: auto;
+      }
     }
   }
 }

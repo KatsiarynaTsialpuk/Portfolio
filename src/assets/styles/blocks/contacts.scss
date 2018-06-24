@@ -30,4 +30,8 @@
     font-weight: 500;
     color: rgba(69, 90, 100, .8);
   }
+
+  @include phone {
+    background: rgba(252, 252, 252, 1);
+  }
 }

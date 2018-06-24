@@ -1,5 +1,5 @@
 .index {
-  background: url("./assets/images/bg.jpg") center center / cover no-repeat;
+  background: url("./assets/images/bg/bg.jpg") center center / cover no-repeat;
   height: 100%;
   position: relative;
 
@@ -9,25 +9,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include phone {
+      padding-top: 25px;
+    }
   }
 
   &__socials {
     margin-bottom: 45px;
-  }
-}
-
-.btn-auth {
-  color: $white;
-  background-color: transparent;
-  border: 1px solid $white;
-  border-radius: 5px;
-  padding: 12px 28px;
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
-
-  &:hover {
-    background: $white;
-    color: $green;
   }
 }

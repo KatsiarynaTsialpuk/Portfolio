@@ -10,4 +10,18 @@
     width: 25px;
     height: 16px;
   }
+
+  &__bottom {
+    bottom: auto;
+    transform: rotate(180deg);
+
+    @include tablet {
+      bottom: 260px;
+      left: 47%;
+    }
+
+    @include phone {
+      bottom: 300px;
+    }
+  }
 }

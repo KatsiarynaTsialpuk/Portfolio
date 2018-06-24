@@ -1,0 +1,51 @@
+//mixins for fonts
+
+@mixin bernier() {
+  font-family: 'bernier';
+}
+
+@mixin roboto($style: light) {
+  font-family: 'Roboto', Helvetica, sans-serif;
+
+  @if $style == light {
+    font-weight: 300;
+  }
+
+  @if $style == medium {
+    font-weight: 700;
+  }
+
+  @if $style == bold {
+    font-weight: 900;
+  }
+}
+
+@mixin fontawesome() {
+  font-family: 'fontawesome';
+}
+
+//mixin for font-size
+
+@mixin font-size($sizeValue) {
+  font-size: $sizeValue/16 + rem;
+}
+
+//mixin for line-height
+
+@mixin line-height($heightValue) {
+  line-height: $heightValue/16 + rem;
+}
+
+//media
+
+@mixin tablet {
+  @media screen and (max-width: $tablet)  {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $phone)  {
+    @content;
+  }
+}
