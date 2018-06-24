@@ -1,6 +1,6 @@
 .modal-form {
   border-radius: 10px 10px 0 0;
-  background: rgba(#fff, .3);
+  background: rgba(#fff, .85);
   position: relative;
   padding: 20px;
 
@@ -41,6 +41,10 @@
   margin-bottom: 20px;
 }
 
+.modal-form__wrapper {
+  display: flex;
+}
+
 .modal-form__input {
   display: block;
   border-radius: 5px;
@@ -52,6 +56,26 @@
   &_textarea {
     height: 140px;
     resize: vertical;
+  }
+}
+
+.modal-form__icon {
+  position: relative;
+  background: $light-gray;
+  width: 45px;
+  height: 48px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+
+  &::before {
+    font-family: "fontawesome";
+    content: '\f007';
+    color: $gray;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
