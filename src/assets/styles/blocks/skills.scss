@@ -70,11 +70,11 @@
 
 .circle {
   margin: 0;
+  height: 120px;
+  width: 120px;
 
   &__figure {
-    height: 120px;
     transform: rotate(-90deg);
-    width: 120px;
   }
 
   &__below,
