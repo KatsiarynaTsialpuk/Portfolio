@@ -1,0 +1,32 @@
+.auth
+    .auth__title
+        .title.title__small Авторизируйтесь
+    .auth__form
+        form.form(action="" method="post")
+            .form__row
+                .modal-form__wrapper
+                    .modal-form__icon.modal-form__icon-user
+                    input(type='text' name='login' placeholder='Логин').modal-form__input
+            .form__row
+                .modal-form__wrapper
+                    .modal-form__icon.modal-form__icon-pasw
+                    input(type='text' name='password' placeholder='Пароль').modal-form__input
+            .form__row
+                label.form__checkbox
+                    input.form__checkbox-input(type='checkbox' name='man' value='1')
+                    .form__checkbox-check
+                    span.form__title Я человек
+            .form__row
+                span.form__title.form__title-bold Вы точно не робот?
+            .form__row.form__row-margin
+                label.form__radio
+                    input.form__radio-input(type='radio' name='robot' value='yes')
+                    .form__radio-check
+                    span.form__title.form__title-margin Да
+                label.form__radio
+                    input.form__radio-input(type='radio' name='robot' value='no')
+                    .form__radio-fake
+                    span.form__title Не уверен
+            .form__buttons
+                button.modal-form__button На главную
+                button.modal-form__button#back Войти
