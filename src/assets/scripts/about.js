@@ -1,3 +1,3 @@
 import "./modules/map";
 import "./modules/sidenav";
-// import "./modules/skills";
+import "./modules/skills";
