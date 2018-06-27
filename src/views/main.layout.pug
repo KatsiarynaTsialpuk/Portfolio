@@ -12,12 +12,13 @@ html(lang="ru")
     
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
-  body
+  body.body
     .wrapper
       .maincontent
         block content
           include ./blocks/header
 
+      include ./blocks/hamburger-menu
       include ./blocks/footer
     include ./components/entry
 

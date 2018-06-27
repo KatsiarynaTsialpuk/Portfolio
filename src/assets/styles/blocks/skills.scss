@@ -28,22 +28,22 @@
 
   &-row__item {
     margin-bottom: 40px;
-    margin-left: 40px;
+    margin-right: 40px;
     position: relative;
 
-    &:first-child {
-      margin-left: 0;
-    }
+    //&:first-child {
+    //  margin-left: 0;
+    //}
 
     @include tablet {
-      margin-left: 20px;
+      margin-right: 20px;
     }
 
     @include phone {
       margin: 20px;
 
       &:first-child {
-        margin-left: 20px;
+        margin-right: 20px;
       }
     }
   }
@@ -89,7 +89,7 @@
 
   &__above {
     stroke: $green;
-    stroke-dasharray: 282.3;
+    stroke-dasharray: 250;
     stroke-dashoffset: 100;
     transition: stroke-dasharray 1s;
 

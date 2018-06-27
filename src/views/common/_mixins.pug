@@ -7,6 +7,10 @@ mixin icon(iconName, iconClass)
 mixin image(imagePath, imageAlt, imageClass)
     img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
+//img for parallax
+mixin imageLayer(imagePath, imageAlt, imageClass)
+    img(src=`./assets/images/parallax_bg/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
 //socials
 mixin socials(modClassName, items)
     ul.socials(class=(modClassName === '') ? '' : `socials__${modClassName}`)

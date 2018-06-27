@@ -1,19 +1,24 @@
 extends ../auth.layout.pug
 
 block content
+  include ../blocks/parallax
   section.section.index
     .index__content
       .index__user
-        .user.user__color-gray
-          .user__img
-            .user__img-avatar
-          .user__desc
-            .user__name Тельпук Екатерина
-            .user__info Личный сайт веб-разработчика
-          .index__socials
-            +socials('green', socList)
-          +nav('nav', menuFirst)
-    .auth
-      a(href="#").btn.btn__auth Авторизироваться
+        .index__wrapper
+          .user.user__color-gray
+            .user__img
+              .user__img-avatar
+            .user__desc
+              .user__name Тельпук Екатерина
+              .user__info Личный сайт веб-разработчика
+            .index__socials
+              +socials('green', socList)
+            +nav('nav', menuFirst)
+      .index__auth
+        .index__wrapper
+         include ../blocks/auth
+    .auth-btn
+      a(href="").btn.btn__auth#auth Авторизироваться
     .footer__index.copyright
         p © Тельпук Екатерина | создано с любовью в LoftSchool | 2016

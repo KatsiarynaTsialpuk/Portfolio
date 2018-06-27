@@ -1,9 +1,20 @@
 .index {
-  background: url("./assets/images/bg/bg.jpg") center center / cover no-repeat;
+  //background: url("./assets/images/bg/bg.jpg") center center / cover no-repeat;
   height: 100%;
   position: relative;
 
-  &__user {
+  &__visible.index__content {
+      transform: rotateY(180deg);
+  }
+
+  &__content {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .6s;
+    top: 50%;
+  }
+
+  &__wrapper {
     display: flex;
     position: absolute;
     top: 50%;
@@ -13,6 +24,17 @@
     @include phone {
       padding-top: 25px;
     }
+  }
+
+  &__auth {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+
+  &__user {
+    transform: rotateY(0deg);
+    z-index: 2;
+    backface-visibility: hidden;
   }
 
   &__socials {

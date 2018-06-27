@@ -1,0 +1,46 @@
+.parallax__image-cloud_1 {
+  width: 20%;
+  bottom: 70%;
+  left: -5%;
+  animation: cloud_1 150s linear infinite;
+}
+
+.parallax__image-cloud_2 {
+  width: 25%;
+  bottom: 50%;
+  left: -15%;
+  animation: cloud_2 125s linear infinite;
+}
+
+.parallax__image-cloud_3 {
+  width: 20%;
+  left: -45%;
+  animation: cloud_3 100s linear infinite;
+}
+
+@keyframes cloud_1 {
+  from {
+    left: -10%;
+  }
+  to {
+    left: 115%;
+  }
+}
+
+@keyframes cloud_2 {
+  from {
+    right: -25%;
+  }
+  to {
+    left: 125%;
+  }
+}
+
+@keyframes cloud_3 {
+  from {
+    left: -45%;
+  }
+  to {
+    left: 145%;
+  }
+}
