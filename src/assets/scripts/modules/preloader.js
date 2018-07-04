@@ -1,35 +1,25 @@
-function preloader() {
-  const elPreloader = document.querySelector(".preloader");
-  const numPreloader = elPreloader.querySelector(".preloader__num");
-  const images = document.images;
-  const imagesCount = images.length;
-  const percent = 100 / imagesCount;
-  let counter = 0;
+const images = document.images;
+const imagesCount = images.length;
+let counter = 0;
+const elPreloader = document.querySelector(".preloader");
+const numPreloader = elPreloader.querySelector(".preloader__num");
 
-  for (let i = 0; i < imagesCount; i++) {
-    const img = images[i];
-    const imgCopy = new Image();
-    imgCopy.src = img.src;
-    imgCopy.onload = imgLoad;
-    imgCopy.onerror = imgLoad;
-  }
+for (let i = 0; i < imagesCount; i++) {
+  const imgCopy = new Image();
+  imgCopy.onload = imgLoad;
+  imgCopy.onerror = imgLoad;
+  imgCopy.src = images[i].src;
+}
 
-  function imgLoad() {
-    counter++;
-    numPreloader.innerHTML = Math.round(percent * counter);
-  }
+function imgLoad() {
+  counter++;
+  numPreloader.innerHTML = (((100 / imagesCount) * counter) << 0) + "%";
 
-  window.addEventListener("load", setStyle);
-
-  function setStyle() {
-    const stylePreloader = elPreloader.style;
-    setTimeout(() => {
-      stylePreloader.opacity = 0;
-    }, 2000);
-
-    setTimeout(() => {
-      stylePreloader.display = "none";
-    }, 3000);
+  if (counter >= imagesCount) {
+    setTimeout(function() {
+      if (!elPreloader.classList.contains("done")) {
+        elPreloader.classList.add("done");
+      }
+    }, 5000);
   }
 }
-preloader();

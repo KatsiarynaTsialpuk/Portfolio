@@ -1,4 +1,3 @@
-//Google maps
 var map;
 var center = {
   lat: 53.917742,
