@@ -1,7 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const activeMenu = document.querySelector(".hamburger__menu");
 const bodyDoc = document.querySelector(".body");
-console.log(bodyDoc);
 
 hamburger.addEventListener("click", function(e) {
   e.preventDefault();

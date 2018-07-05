@@ -90,8 +90,8 @@
     padding-left: 35px;
 
     &-fake {
-      height: 25px;
-      width: 25px;
+      height: 20px;
+      width: 20px;
       border-radius: 4px;
     }
   }
@@ -134,8 +134,8 @@
 }
 
 .form__checkbox .form__checkbox-fake::after {
-  left: 9px;
-  top: 5px;
+  left: 7px;
+  top: 4px;
   width: 5px;
   height: 10px;
   border: solid #00bfa5;
