@@ -77,6 +77,22 @@
       border: 1px solid $gray;
       border-radius: 50%;
       left: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+  &__checkbox {
+    padding-left: 35px;
+
+    &-fake {
+      height: 25px;
+      width: 25px;
+      border-radius: 4px;
     }
   }
 
@@ -89,4 +105,42 @@
     font-family: 'Roboto';
     font-size: 16px;
   }
+}
+
+.form__checkbox .form__checkbox-input:checked ~ .form__checkbox-fake::after {
+  display: flex;
+}
+
+.form__radio .form__radio-input:checked ~ .form__radio-fake::after {
+  display: flex;
+}
+
+.form__radio .form__radio-input:checked ~ .form__title {
+   color: $green;
+ }
+
+.form__checkbox .form__checkbox-input:checked ~ .form__title {
+  color: $green;
+}
+
+.form__radio .form__radio-fake::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $green;
+}
+
+.form__checkbox .form__checkbox-fake::after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #00bfa5;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
