@@ -47,17 +47,17 @@ block content
                             .reviews__name Сабанцев Владимир
                             .reviews__occ преподаватель
             .reviews__form-container
-                form.modal-form.modal-form_blured
+                form.modal-form.modal-form_blured(action="server.php" method="POST")
                     .modal-form__bg
                     .modal-form__title
                         .title.title__small Связаться со мной
                     .modal-form__container
-                        input(type="text" placeholder="Имя").modal-form__input
-                        input(type="text" placeholder="Email").modal-form__input
-                        textarea(placeholder="Ваше сообщение").modal-form__input.modal-form__input_textarea
+                        input(type="text" placeholder="Имя" required).modal-form__input
+                        input(type="email" placeholder="Email" required).modal-form__input
+                        textarea(placeholder="Ваше сообщение" required).modal-form__input.modal-form__input_textarea
                     .modal-form__buttons
-                        button.modal-form__button Отправить
-                        button.modal-form__button Очистить
+                        button.modal-form__button(type="submit") Отправить
+                        button.modal-form__button(type="reset") Очистить
         .arrow-down.arrow-down__bottom
             a(href="#").arrow-down__link
                 +image('arrow_down.png', 'arrow_down', 'arrow-down_img')

@@ -2,7 +2,7 @@
     .auth__title
         .title.title__small Авторизируйтесь
     .auth__form
-        form.form(action="" method="post")
+        form.form(action="server.php" method="POST")
             .form__row
                 .modal-form__wrapper
                     .modal-form__icon.modal-form__icon-user
@@ -13,14 +13,14 @@
                     input(type='password' name='password' placeholder='Пароль' required).modal-form__input
             .form__row
                 label.form__checkbox
-                    input.form__checkbox-input(type='checkbox' name='man' value='1')
+                    input.form__checkbox-input(type='checkbox' name='man' value='1' required)
                     .form__checkbox-fake
                     span.form__title Я человек
             .form__row
                 span.form__title Вы точно не робот?
             .form__row.form__row-margin
                 label.form__radio
-                    input.form__radio-input(type='radio' name='robot' value='yes')
+                    input.form__radio-input(type='radio' name='robot' value='yes' required)
                     .form__radio-fake
                     span.form__title.form__title-margin Да
                 label.form__radio
@@ -29,4 +29,4 @@
                     span.form__title Не уверен
             .form__buttons
                 button.modal-form__button На главную
-                button.modal-form__button#back Войти
+                button.modal-form__button(type='submit')#back Войти
