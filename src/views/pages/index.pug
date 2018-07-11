@@ -17,11 +17,7 @@ block content
             +nav('nav', menuFirst)
       .index__auth
         .index__wrapper
-          .auth
-            .auth__title
-              .title.title__small Авторизируйтесь
-            .auth__form
-              #auth-component
+         include ../components/modules/authForm
     .auth-btn
       a(href="").btn.btn__auth#auth-btn Авторизироваться
     .footer__index.copyright

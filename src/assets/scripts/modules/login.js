@@ -2,7 +2,7 @@ import Vue from "vue";
 import axios from "axios";
 
 new Vue({
-  el: "#auth-component",
+  el: "#auth-form",
   data() {
     return {
       user: {
@@ -14,7 +14,7 @@ new Vue({
   methods: {
     login() {
       axios
-        .post("http://localhost:8000/login", this.user)
+        .post("http://webdev-api.loftschool.com", this.user)
         .then(response => {
           if (response.status === 200) {
             const ttl = Math.floor(Date.now() / 1000 + response.data.ttl);
@@ -25,6 +25,5 @@ new Vue({
         })
         .catch(e => console.error(e));
     }
-  },
-  template: "#auth-form"
+  }
 });
