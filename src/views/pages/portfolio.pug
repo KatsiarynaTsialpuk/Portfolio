@@ -47,7 +47,7 @@ block content
                             .reviews__name Сабанцев Владимир
                             .reviews__occ преподаватель
             .reviews__form-container
-                form.modal-form.modal-form_blured(action="server.php" method="POST")
+                form.modal-form.modal-form_blured(action="server.php" method="POST")#order-form
                     .modal-form__bg
                     .modal-form__title
                         .title.title__small Связаться со мной
@@ -61,3 +61,4 @@ block content
         .arrow-down.arrow-down__bottom
             a(href="#").arrow-down__link
                 +image('arrow_down.png', 'arrow_down', 'arrow-down_img')
+    include ../blocks/popup

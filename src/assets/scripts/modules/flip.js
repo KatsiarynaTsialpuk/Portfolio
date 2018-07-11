@@ -1,4 +1,4 @@
-const auth = document.querySelector("#auth");
+const auth = document.querySelector("#auth-btn");
 const back = document.querySelector("#back");
 const vis = document.querySelector(".index__content");
 const btn = document.querySelector(".auth-btn");

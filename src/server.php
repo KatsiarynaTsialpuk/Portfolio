@@ -4,13 +4,6 @@ $name = $_POST['user-name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
-$delivery = $_POST['delivery'];
-$delivery = isset($delivery) ? 'Да' : 'Нет';
-$card = $_POST['card'];
-$card = isset($card) ? 'Да' : 'Нет';
-$disturb = $_POST['dont-disturb'];
-$disturb = isset($disturb) ? 'Нет' : 'Да';
-
 $mail_message = '
     <html>
     <head>

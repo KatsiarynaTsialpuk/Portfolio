@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(47, 50, 52, .92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10000;
+
+  &__active {
+    display: flex;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    background: $white;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  &__text {
+    @include font-size(14);
+    @include line-height(24);
+
+    color: $gray;
+    margin-bottom: 20px;
+
+    &_error {
+      color: $green;
+    }
+  }
+}

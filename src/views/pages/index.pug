@@ -17,8 +17,12 @@ block content
             +nav('nav', menuFirst)
       .index__auth
         .index__wrapper
-         include ../blocks/auth
+          .auth
+            .auth__title
+              .title.title__small Авторизируйтесь
+            .auth__form
+              #auth-component
     .auth-btn
-      a(href="").btn.btn__auth#auth Авторизироваться
+      a(href="").btn.btn__auth#auth-btn Авторизироваться
     .footer__index.copyright
         p © Тельпук Екатерина | создано с любовью в LoftSchool | 2016
