@@ -1,23 +1,33 @@
 <template lang="pug">
-    div
-        input(type="text" placeholder="Название проекта" v-model="work.title")
-        br
-        input(type="text" placeholder="Технологии" v-model="work.techs")
-        br
-        input(type="text" placeholder="Ссылка" v-model="work.link")
-        br
-        input(type="file" @change="addPhoto")
-        br
-        hr
-        button(@click="addNewWork") Добавить работу
+    .page.works
+        h2.title Страница "Мои работы"
+        .works__content
+            h6.works__head Добавить работу
+            form.works__form#worksForm(@submit.prevent="addWork")
+                label.works__row
+                    input(type="text" v-model="newWork.title" placeholder="Название проетка").works__input
+                label.works__row
+                    input(type="text" v-model="newWork.techs" placeholder="Технологии").works__input
+                label.works__row
+                    input(type="text" v-model="newWork.link" placeholder="Ссылка").works__input
+                label.works__row
+                    span.works__desc Загрузить картинку
+                    input(type="file" @change="addPhoto").works__file
+                .works__row
+                    button(type="submit").btn Добавить
+            ul.works__list
+                li.works__item(v-for="work in works" :key="work.id")
+                    span.work__text {{work.title}}
+                    span.work__text {{work.link}}
+                    button.btn.btn--delete(type="button" @click="removeItem(work)") Удалить
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapState, mapActions, mapMutations } from "vuex";
 export default {
   data() {
     return {
-      work: {
+      newWork: {
         title: "",
         techs: "",
         link: "",
@@ -25,19 +35,34 @@ export default {
       }
     };
   },
+  computed: {
+    ...mapState({
+      works: state => state.works.data
+    })
+  },
+  created() {
+    this.fetchWorks();
+  },
   methods: {
-    ...mapActions(["addWork"]),
+    ...mapActions(["fetchWorks", "addNewWork", "removeExistedWork"]),
     addPhoto(e) {
       const files = e.target.files;
       if (files.length === 0) return;
-      this.work.photo = files[0];
+      this.newWork.photo = files[0];
     },
-    addNewWork() {
+    addWork() {
       const formData = new FormData();
-      Object.keys(this.work).forEach(prop => {
-        formData.append(prop, this.work[prop]);
+      Object.keys(this.newWork).forEach(prop => {
+        formData.append(prop, this.newWork[prop]);
       });
-      this.addWork(formData);
+      this.addNewWork(formData).then(res => {
+        this.newWork.title = "";
+        this.newWork.techs = "";
+        this.newWork.link = "";
+      });
+    },
+    removeItem(work) {
+      this.removeExistedWork(work.id);
     }
   }
 };
@@ -78,7 +103,9 @@ export default {
     position: absolute;
     left: 24px;
     content: "";
-    background: url("../img/load.png") center center no-repeat;
+    background-image: url("../img/load.png");
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 35px;
     height: 34px;
   }

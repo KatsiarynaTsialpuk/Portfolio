@@ -1,13 +1,13 @@
 <template lang="pug">
-    #about
-        button(@click="logout()") Выйти
-        h1 Страница обо мне
-        skillsRow(
-        v-for="type in types"
-        :key="type.name"
-        :type="type"
-        :skills="skills"
-        )
+    .page.about
+        h2.title Страница "Обо мне"
+        .about__content
+            skillsRow(
+            v-for="type in types"
+            :key="type.name"
+            :type="type"
+            :skills="skills"
+            )
 
 </template>
 
@@ -21,9 +21,9 @@ export default {
   data() {
     return {
       types: [
-        { id: 0, name: "frontend" },
-        { id: 1, name: "backend" },
-        { id: 2, name: "workflow" }
+        { id: 0, name: "Frontend" },
+        { id: 1, name: "Backend" },
+        { id: 2, name: "Workflow" }
       ]
     };
   },
@@ -32,11 +32,6 @@ export default {
       skills: state => state.skills.data
     }),
     ...mapGetters(["userId"])
-  },
-  watch: {
-    userId() {
-      // this.fetchSkills();
-    }
   },
   created() {
     this.fetchSkills();

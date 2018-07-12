@@ -1,7 +1,7 @@
 <template lang="pug">
     #header
-        .title Панель администрирования
-        a.exit Вернуться на сайт
+        h1.header__title Панель администрирования
+        a.header__link(href="../") Вернуться на сайт
 </template>
 
 <style lang="scss" scoped>
@@ -12,7 +12,6 @@
   background-color: #00bfa5;
   padding: 20px 25px;
 }
-
 .header__title {
   color: white;
   font-size: 28px;
@@ -31,9 +30,5 @@
     order: 2;
     font-size: 23px;
   }
-}
-
-.exit {
-  color: inherit;
 }
 </style>

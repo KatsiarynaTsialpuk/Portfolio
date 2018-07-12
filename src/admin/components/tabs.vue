@@ -12,15 +12,13 @@ export default {
   data() {
     return {
       tabs: [
-        { title: "Обо мне", href: "/" },
-        { title: "Работы", href: "/works" },
-        { title: "Блог", href: "/blog" }
+        { title: "Обо мне", href: "/portfolio/admin/skills" },
+        { title: "Работы", href: "/portfolio/admin/works" }
       ]
     };
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 #tabs {
@@ -46,7 +44,6 @@ export default {
   display: flex;
   font-weight: 500;
 }
-
 @media (max-width: 520px) {
   .tabs {
     flex-direction: column;

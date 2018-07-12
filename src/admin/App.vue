@@ -11,47 +11,31 @@
 <script>
 import header from "./components/header";
 import tabs from "./components/tabs";
-import skills from "./components/skills";
-const data = [
-  { id: 1, title: "Html", percent: 20, category: 0 },
-  { id: 2, title: "PHP", percent: 20, category: 1 },
-  { id: 3, title: "CSS", percent: 20, category: 0 },
-  { id: 4, title: "Node.js", percent: 20, category: 1 },
-  { id: 5, title: "Mongo", percent: 20, category: 1 },
-  { id: 6, title: "Git", percent: 20, category: 2 },
-  { id: 7, title: "Gulp", percent: 20, category: 2 }
-];
 import { mapActions, mapState, mapGetters } from "vuex";
 export default {
   components: {
     appHeader: header,
-    tabs,
-    skills
-  },
-  methods: {
-    ...mapActions(["getUserInfo"])
+    tabs
   }
 };
 </script>
+
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&subset=cyrillic");
 :root {
   font-size: 16px;
 }
-
 @media (max-width: 768px) {
   :root {
     font-size: 14px;
   }
 }
-
 body,
 html {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
-
 body {
   font-family: "Roboto", Helvetica, sans-serif;
   font-weight: 300;
@@ -64,27 +48,15 @@ body {
 #root {
   height: 100%;
 }
-
 #root {
   background: url("../assets/images/bg/admin_bg.jpg") center center / cover
     no-repeat;
-  display: flex;
-  flex-flow: column;
 }
-
-.header {
-  height: 80px;
-}
-
 ul {
   padding: 0;
   margin: 0;
-
-  li {
-    list-style: none;
-  }
+  list-style: none;
 }
-
 ::selection {
   background-color: rgba(#00bfa5, 0.7);
 }
@@ -118,7 +90,7 @@ select {
   border: none;
   border-radius: 5px;
   transition: 0.3s;
-  margin: 25px 0 0 25px;
+  margin: 20px 0 0 25px;
   &:hover {
     background-color: #008b79;
   }
@@ -131,16 +103,5 @@ select {
       background-color: red;
     }
   }
-}
-
-* {
-  box-sizing: border-box;
-}
-.tabs {
-  height: 60px;
-}
-.main-content {
-  flex: 1;
-  padding: 20px;
 }
 </style>

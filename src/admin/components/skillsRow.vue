@@ -1,7 +1,7 @@
 <template lang="pug">
     .skills
-        .skills-title {{type.name}}
-        table.skills-list
+        h6.skills__title {{type.name}}
+        ul.skills__list
             skill-item(
             v-for="skill in skills"
             v-if="skill.category === type.id"
@@ -12,8 +12,6 @@
             :editmode="true"
             :typeId="type.id"
             )
-        HR
-
 </template>
 
 <script>
@@ -32,14 +30,14 @@ export default {
       default: () => []
     }
   },
-  mehtods: {
+  methods: {
     fromNameToNum(name) {
       switch (name) {
-        case "frontend":
+        case "Frontend":
           return 0;
-        case "backend":
+        case "Backend":
           return 1;
-        case "workflow":
+        case "Workflow":
           return 2;
       }
     }
